@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E7A95E729474E4B00B558A2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95E629474E4B00B558A2 /* Card.swift */; };
 		C125EBA9293F9932009231F4 /* FreesbeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125EBA8293F9932009231F4 /* FreesbeApp.swift */; };
 		C125EBAB293F9932009231F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125EBAA293F9932009231F4 /* ContentView.swift */; };
 		C125EBAD293F9932009231F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C125EBAC293F9932009231F4 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E7A95E629474E4B00B558A2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		C125EBA5293F9932009231F4 /* Freesbe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freesbe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C125EBA8293F9932009231F4 /* FreesbeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreesbeApp.swift; sourceTree = "<group>"; };
 		C125EBAA293F9932009231F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E7A95DD29474D4000B558A2 /* Wave */ = {
+			isa = PBXGroup;
+			children = (
+				9E7A95E029474DF000B558A2 /* ViewModel */,
+				9E7A95E129474DF700B558A2 /* Model */,
+			);
+			path = Wave;
+			sourceTree = "<group>";
+		};
+		9E7A95DE29474DA200B558A2 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				9E7A95E229474E0500B558A2 /* ViewModel */,
+				9E7A95E329474E0C00B558A2 /* Model */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		9E7A95DF29474DE400B558A2 /* InformationModal */ = {
+			isa = PBXGroup;
+			children = (
+				9E7A95E529474E3400B558A2 /* ViewModel */,
+				9E7A95E429474E2E00B558A2 /* View */,
+			);
+			path = InformationModal;
+			sourceTree = "<group>";
+		};
+		9E7A95E029474DF000B558A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9E7A95E129474DF700B558A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E7A95E229474E0500B558A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9E7A95E629474E4B00B558A2 /* Card.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9E7A95E329474E0C00B558A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E7A95E429474E2E00B558A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E7A95E529474E3400B558A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C125EB9C293F9931009231F4 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +123,9 @@
 		C125EBA7293F9932009231F4 /* Freesbe */ = {
 			isa = PBXGroup;
 			children = (
+				9E7A95DF29474DE400B558A2 /* InformationModal */,
+				9E7A95DE29474DA200B558A2 /* Carousel */,
+				9E7A95DD29474D4000B558A2 /* Wave */,
 				C125EBA8293F9932009231F4 /* FreesbeApp.swift */,
 				C125EBAA293F9932009231F4 /* ContentView.swift */,
 				C125EBAC293F9932009231F4 /* Assets.xcassets */,
@@ -138,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C125EBAB293F9932009231F4 /* ContentView.swift in Sources */,
+				9E7A95E729474E4B00B558A2 /* Card.swift in Sources */,
 				C125EBA9293F9932009231F4 /* FreesbeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
