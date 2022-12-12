@@ -17,8 +17,7 @@ struct ContentView: View {
             WaveFilled()
             
             VStack {
-                Image("BannerTop")
-                    .frame(height: 80, alignment: .center)
+                TopMenuView()
                 
                 Spacer(minLength: 80)
                 
