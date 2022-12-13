@@ -24,3 +24,14 @@ struct Card: Identifiable  {
     var thrower = ""
     var description = ""
 }
+
+struct Activity {
+    var imageName: String
+    var throwerAvatar = ""
+    var cardTitle = ""
+    var tag = ""
+    var time = ""
+    var location = ""
+    var thrower = ""
+    var description = ""
+}

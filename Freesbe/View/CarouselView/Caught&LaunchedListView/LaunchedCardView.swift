@@ -9,10 +9,10 @@ import SwiftUI
 
 struct LaunchedCardView: View {
     let arrayOfLaunchedCards = [
-        FreesbeCard(throwerAvatar:"Card 1", cardTitle: "SwiftUI with Ahmed", tag: "code", time: "14:00", location: "Collab 3-1", thrower: "Ahmed Mgua", description: "test"),
-        FreesbeCard(throwerAvatar:"Card 1", cardTitle: "SwiftUI with Ahmed", tag: "code", time: "14:00", location: "Collab 3-1", thrower: "Ahmed Mgua",description: "test")
+        Card(imageName: "", throwerAvatar:"Card 1", cardTitle: "SwiftUI with Ahmed", tag: "code", time: "14:00", location: "Collab 3-1", thrower: "Ahmed Mgua", description: "test"),
+        Card(imageName: "", throwerAvatar:"Card 1", cardTitle: "SwiftUI with Ahmed", tag: "code", time: "14:00", location: "Collab 3-1", thrower: "Ahmed Mgua", description: "test")
     ]
-    
+    @State var infoModal = false
     var body: some View {
         VStack {
             ForEach(arrayOfLaunchedCards) { card in
@@ -46,13 +46,32 @@ struct LaunchedCardView: View {
                             }
                             
                         }
+                    Button {
+                        infoModal.toggle()
+                        
+                    } label: {
+                            Image(card.throwerAvatar)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 120, height: 120)
+                    }
+                    .offset(x: 230)
+
+                        
                     
-                        Image(card.throwerAvatar)
+                    
+                }
+                .sheet(isPresented: $infoModal) {
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .padding(.bottom, -50)
+                        Image("testdetails")
                             .resizable()
-                            .frame(width: 120, height: 120)
-                            .offset(x: 230)
-                    
-                    
+                            .scaledToFill()
+                            .padding(.bottom, -50)
+                            .presentationDetents([.bar])
+                    }
                 }
                 
                 
@@ -65,6 +84,6 @@ struct LaunchedCardView: View {
 
 struct LaunchedCardView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchedCardView()
+        ContentView()
     }
 }

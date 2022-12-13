@@ -13,18 +13,43 @@ extension PresentationDetent {
 
 struct TopMenuView: View {
     @State private var showAddNewFreesbe = false
-    
+    @Binding var isActive: Bool
     
     var body: some View {
         VStack {
             HStack {
-                Image(TopMenu().personalImage)
-                    .resizable()
-                    .scaledToFill()
-                    .offset(x: 3)
-                    .frame(width: 50, height: 50, alignment: .center)
-                    .clipShape(Circle())
-                    .padding(.leading, 32)
+                
+                Menu {
+                    Button {
+                        isActive = true
+
+                    } label: {
+                        HStack {
+                            Text("Settings")
+                            Image(systemName: "gear")
+                        }
+                    }
+                    Button {
+                        //
+                    } label: {
+                        HStack {
+                            Text("Logout")
+                            Image(systemName: "square.and.arrow.up")
+                        }
+                    }
+                    
+                } label: {
+                    Image(TopMenu().personalImage)
+                        .resizable()
+                        .scaledToFill()
+                        .offset(x: 3)
+                        .frame(width: 50, height: 50, alignment: .center)
+                        .clipShape(Circle())
+                        .padding(.leading, 32)
+                }
+                
+                
+                
                 
                 VStack(alignment: .leading) {
                     Text("Happy \(TopMenu().dayOfTheWeek)")
@@ -32,6 +57,7 @@ struct TopMenuView: View {
                     Text(TopMenu().personalName)
                         .font(.title.bold())
                         .foregroundColor(.white)
+                    
                     
                 }
                 Spacer()
@@ -56,8 +82,8 @@ struct TopMenuView: View {
                     }
                 }
                 .padding(.trailing, 32)
-                      
-
+                
+                
             }
             
         }
@@ -67,12 +93,13 @@ struct TopMenuView: View {
                 .presentationDetents([.bar])
         }
         Spacer()
+        
     }
 }
 
 struct TopMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        TopMenuView().preferredColorScheme(.dark)
+        TopMenuView(isActive: .constant(false)).preferredColorScheme(.dark)
         
     }
 }

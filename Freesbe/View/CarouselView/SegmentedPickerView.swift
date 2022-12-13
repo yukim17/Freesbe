@@ -16,6 +16,7 @@ struct SegmentedPickerView: View {
     @State private var selectedCategory: MainCategory = .Feed
     
     init() {
+        
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named: "addbutton")
         UISegmentedControl.appearance().backgroundColor = UIColor(named: "SegmentedPickerBG")
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .selected)

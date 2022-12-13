@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct AddNewFreesbeView: View {
-    var arrayAddedFreesbes = [FreesbeCard]()
+    var arrayAddedFreesbes = [Card]()
     var arrayOfCategories = ["Code", "Design", "Business", "Games", "Social", "Others"]
     var arrayOfPlaces = ["Lab 1", "Lab 2", "Lab 3"]
     var pickImage = ["Load image from phone", "Load iamge from your Drive"]
@@ -67,7 +67,7 @@ struct AddNewFreesbeView: View {
     
     }
     mutating func addNewFreesbe() {
-        let item = FreesbeCard(throwerAvatar: "Antonio Palomba", cardTitle: title, tag: category, time: "Today", location: place, thrower: "Antonio Palomba", description: description)
+        let item = Card(imageName: "", throwerAvatar: "Antonio Palomba", cardTitle: title, tag: category, time: "Today", location: place, thrower: "Antonio Palomba", description: description)
         arrayAddedFreesbes.append(item)
     }
 }
