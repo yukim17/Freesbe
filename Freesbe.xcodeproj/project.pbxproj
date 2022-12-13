@@ -14,6 +14,12 @@
 		9E7A95EF2947631B00B558A2 /* WaveFilled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95EE2947631B00B558A2 /* WaveFilled.swift */; };
 		9E7A95F42947676400B558A2 /* TopMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95F32947676400B558A2 /* TopMenuModel.swift */; };
 		9E7A95F6294767CE00B558A2 /* TopMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95F5294767CE00B558A2 /* TopMenuView.swift */; };
+		9E7A95FD2947782800B558A2 /* SegmentedPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95FC2947782800B558A2 /* SegmentedPickerView.swift */; };
+		9E7A960529478B4F00B558A2 /* FreesbeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A960429478B4F00B558A2 /* FreesbeCard.swift */; };
+		9E7A960729478C7000B558A2 /* LaunchedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A960629478C7000B558A2 /* LaunchedCardView.swift */; };
+		9E8B87B12947C8BB00976DB9 /* AddNewFreesbeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B87B02947C8BB00976DB9 /* AddNewFreesbeView.swift */; };
+		9E8B87B32947D21F00976DB9 /* SwipeToLaunchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B87B22947D21F00976DB9 /* SwipeToLaunchButton.swift */; };
+		9E8B87B729480D0A00976DB9 /* CaughtCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B87B629480D0A00976DB9 /* CaughtCardView.swift */; };
 		C125EBA9293F9932009231F4 /* FreesbeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125EBA8293F9932009231F4 /* FreesbeApp.swift */; };
 		C125EBAB293F9932009231F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125EBAA293F9932009231F4 /* ContentView.swift */; };
 		C125EBAD293F9932009231F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C125EBAC293F9932009231F4 /* Assets.xcassets */; };
@@ -28,6 +34,12 @@
 		9E7A95EE2947631B00B558A2 /* WaveFilled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveFilled.swift; sourceTree = "<group>"; };
 		9E7A95F32947676400B558A2 /* TopMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuModel.swift; sourceTree = "<group>"; };
 		9E7A95F5294767CE00B558A2 /* TopMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuView.swift; sourceTree = "<group>"; };
+		9E7A95FC2947782800B558A2 /* SegmentedPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerView.swift; sourceTree = "<group>"; };
+		9E7A960429478B4F00B558A2 /* FreesbeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreesbeCard.swift; sourceTree = "<group>"; };
+		9E7A960629478C7000B558A2 /* LaunchedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchedCardView.swift; sourceTree = "<group>"; };
+		9E8B87B02947C8BB00976DB9 /* AddNewFreesbeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFreesbeView.swift; sourceTree = "<group>"; };
+		9E8B87B22947D21F00976DB9 /* SwipeToLaunchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToLaunchButton.swift; sourceTree = "<group>"; };
+		9E8B87B629480D0A00976DB9 /* CaughtCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaughtCardView.swift; sourceTree = "<group>"; };
 		C125EBA5293F9932009231F4 /* Freesbe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freesbe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C125EBA8293F9932009231F4 /* FreesbeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreesbeApp.swift; sourceTree = "<group>"; };
 		C125EBAA293F9932009231F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,6 +157,81 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9E7A95F72947777700B558A2 /* SegmentedPicker */ = {
+			isa = PBXGroup;
+			children = (
+				9E7A95F82947778B00B558A2 /* ViewModel */,
+				9E7A95F92947779300B558A2 /* View */,
+			);
+			path = SegmentedPicker;
+			sourceTree = "<group>";
+		};
+		9E7A95F82947778B00B558A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9E7A95F92947779300B558A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E7A95FC2947782800B558A2 /* SegmentedPickerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E7A95FF29478B0000B558A2 /* Caught&LaunchedList */ = {
+			isa = PBXGroup;
+			children = (
+				9E7A960329478B1C00B558A2 /* ViewModel */,
+				9E7A960229478B1700B558A2 /* View */,
+			);
+			path = "Caught&LaunchedList";
+			sourceTree = "<group>";
+		};
+		9E7A960229478B1700B558A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E7A960629478C7000B558A2 /* LaunchedCardView.swift */,
+				9E8B87B629480D0A00976DB9 /* CaughtCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E7A960329478B1C00B558A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9E7A960429478B4F00B558A2 /* FreesbeCard.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9E8B87AD2947C86100976DB9 /* AddNewFreesbe */ = {
+			isa = PBXGroup;
+			children = (
+				9E8B87AF2947C87700976DB9 /* ViewModel */,
+				9E8B87AE2947C86D00976DB9 /* View */,
+			);
+			path = AddNewFreesbe;
+			sourceTree = "<group>";
+		};
+		9E8B87AE2947C86D00976DB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E8B87B02947C8BB00976DB9 /* AddNewFreesbeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E8B87AF2947C87700976DB9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9E8B87B22947D21F00976DB9 /* SwipeToLaunchButton.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C125EB9C293F9931009231F4 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +251,9 @@
 		C125EBA7293F9932009231F4 /* Freesbe */ = {
 			isa = PBXGroup;
 			children = (
+				9E8B87AD2947C86100976DB9 /* AddNewFreesbe */,
+				9E7A95FF29478B0000B558A2 /* Caught&LaunchedList */,
+				9E7A95F72947777700B558A2 /* SegmentedPicker */,
 				9E7A95F02947671D00B558A2 /* TopMenu */,
 				9E7A95DF29474DE400B558A2 /* InformationModal */,
 				9E7A95DE29474DA200B558A2 /* Carousel */,
@@ -254,11 +344,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E7A960729478C7000B558A2 /* LaunchedCardView.swift in Sources */,
+				9E8B87B729480D0A00976DB9 /* CaughtCardView.swift in Sources */,
 				9E7A95ED294761CA00B558A2 /* WaveMath.swift in Sources */,
 				C125EBAB293F9932009231F4 /* ContentView.swift in Sources */,
 				9E7A95EB29474F6500B558A2 /* BoomerangCard.swift in Sources */,
+				9E8B87B32947D21F00976DB9 /* SwipeToLaunchButton.swift in Sources */,
 				9E7A95E729474E4B00B558A2 /* Card.swift in Sources */,
 				9E7A95F6294767CE00B558A2 /* TopMenuView.swift in Sources */,
+				9E8B87B12947C8BB00976DB9 /* AddNewFreesbeView.swift in Sources */,
+				9E7A960529478B4F00B558A2 /* FreesbeCard.swift in Sources */,
+				9E7A95FD2947782800B558A2 /* SegmentedPickerView.swift in Sources */,
 				9E7A95EF2947631B00B558A2 /* WaveFilled.swift in Sources */,
 				9E7A95E929474EE700B558A2 /* CarouselView.swift in Sources */,
 				9E7A95F42947676400B558A2 /* TopMenuModel.swift in Sources */,
@@ -392,7 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Freesbe/Preview Content\"";
-				DEVELOPMENT_TEAM = 2DDQ2S75Y4;
+				DEVELOPMENT_TEAM = GJ4Q87M25X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -405,7 +501,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Pizzozhki.Freesbe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antoniopalomba.Freesbe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -423,7 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Freesbe/Preview Content\"";
-				DEVELOPMENT_TEAM = 2DDQ2S75Y4;
+				DEVELOPMENT_TEAM = GJ4Q87M25X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -436,7 +532,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Pizzozhki.Freesbe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antoniopalomba.Freesbe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

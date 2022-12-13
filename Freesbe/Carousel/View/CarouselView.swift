@@ -32,6 +32,7 @@ struct CarouselView: View {
                     .padding(.horizontal,20)
                     .padding(.vertical, 70)
                 Spacer()
+                
             }
             .padding(15)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
@@ -47,7 +48,7 @@ struct CarouselView: View {
     //MARK: Setting up Card's
     func setupCards() {
         for index in 1...4 {
-            cards.append(.init(imageName: "Card \(index)"))
+            cards.append(.init(imageName: "Card \(index)", throwerAvatar:"Card 1", cardTitle: "SwiftUI with Ahmed", tag: "code", time: "14:00", location: "Collab 3-1", thrower: "Ahmed Mgua", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "))
         }
         
         // FOR INFINITE CARDS

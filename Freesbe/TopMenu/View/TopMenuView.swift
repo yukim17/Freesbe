@@ -7,7 +7,14 @@
 
 import SwiftUI
 
+extension PresentationDetent {
+    static let bar = Self.fraction(0.8)
+}
+
 struct TopMenuView: View {
+    @State private var showAddNewFreesbe = false
+    
+    
     var body: some View {
         VStack {
             HStack {
@@ -21,13 +28,15 @@ struct TopMenuView: View {
                 
                 VStack(alignment: .leading) {
                     Text("Happy \(TopMenu().dayOfTheWeek)")
+                        .foregroundColor(.white)
                     Text(TopMenu().personalName)
                         .font(.title.bold())
+                        .foregroundColor(.white)
                     
                 }
                 Spacer()
                 Button {
-                    //Add action to the button
+                    showAddNewFreesbe.toggle()
                 } label: {
                     ZStack{
                         Circle()
@@ -52,13 +61,18 @@ struct TopMenuView: View {
             }
             
         }
+        .padding(.top, 10)
+        .sheet(isPresented: $showAddNewFreesbe) {
+            AddNewFreesbeView()
+                .presentationDetents([.bar])
+        }
         Spacer()
     }
 }
 
 struct TopMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        TopMenuView()
+        TopMenuView().preferredColorScheme(.dark)
         
     }
 }

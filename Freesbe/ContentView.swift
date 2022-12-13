@@ -18,15 +18,24 @@ struct ContentView: View {
             
             VStack {
                 TopMenuView()
+                    
                 
-                Spacer(minLength: 80)
+                SegmentedPickerView()
+                    .padding(.top, 60)
+                    
                 
-                CarouselView()
+                
+                
+                Spacer(minLength: 10)
+                
+                
             }
             
         }
+        .foregroundColor(Color("BG"))
         
     }
+        
 }
 
 struct ContentView_Previews: PreviewProvider {

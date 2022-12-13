@@ -13,6 +13,9 @@ struct BoomerangCard: View {
     var isBlurEnabled: Bool = false
     @Binding var cards: [Card]
     
+    @State private var title = ""
+    @State private var description = ""
+    @State private var showDetails = false
     //MARK: Gesture Properties
     @State var offset: CGFloat = 0
     @State var currentIndex: Int = 0
@@ -20,30 +23,70 @@ struct BoomerangCard: View {
     var body: some View {
         GeometryReader {
             let size = $0.size
-            
-            ZStack {
-                ForEach(cards.reversed()) { card in
-                    CardView(card: card, size: size)
-                    //MARK: Moving only current active card
-                        .offset(y: currentIndex == indexOf(card: card) ? offset: 0)
+            VStack {
+                ZStack {
+                    ForEach(cards.reversed()) { card in
+                        CardView(card: card, size: size)
+                        //MARK: Moving only current active card
+                            .offset(y: currentIndex == indexOf(card: card) ? offset: 0)
+                    }
                 }
+                .onAppear(perform: indexNote)
+                .animation(.spring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7), value: offset == .zero)
+                .frame(width: size.width, height: size.height)
+                .contentShape(Rectangle())
+                .gesture(
+                    DragGesture(minimumDistance: 2)
+                        .onChanged(onChanged(value:))
+                        .onEnded(onEnded(value:))
+                    
+                )
+                Text(title)
+                    .font(.title.bold())
+                    .foregroundColor(.white)
+                    .padding(.top, 50)
+                Text(description)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .foregroundColor(.white)
+                Button {
+                    showDetails.toggle()
+                } label: {
+                    Text("Show details")
+                        .padding(10)
+                        .font(.title)
+                        .foregroundColor(.black)
+                        .background(
+                            Rectangle()
+                                .foregroundColor(.white)
+                                .cornerRadius(40)
+                        )
+                }
+
+               
             }
-            .animation(.spring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7), value: offset == .zero)
-            .frame(width: size.width, height: size.height)
-            .contentShape(Rectangle())
-            .gesture(
-                DragGesture(minimumDistance: 2)
-                    .onChanged(onChanged(value:))
-                    .onEnded(onEnded(value:))
-                
-            )
+            .sheet(isPresented: $showDetails) {
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .padding(.bottom, -50)
+                    Image("testdetails")
+                        .resizable()
+                        .scaledToFill()
+                        .padding(.bottom, -50)
+                }
+                    .presentationDetents([.bar])
+            }
         }
     }
-    
+    func indexNote() {
+        title = cards[currentIndex].cardTitle
+        description = cards[currentIndex].description
+    }
     //MARK: Gesture Calls
     func onChanged(value: DragGesture.Value) {
         //For Safety
         offset = currentIndex == (cards.count - 1) ? 0 : value.translation.height
+        
     }
     
     func onEnded(value: DragGesture.Value) {
@@ -142,6 +185,7 @@ struct BoomerangCard: View {
             .offset(y: card.extraOffset)
             .scaleEffect(scaleFor(index: index), anchor: .top)
             .zIndex(card.zIndex)
+        
     }
     
     //MARK: Scale And Offset Values for Each Card
@@ -189,5 +233,11 @@ struct BoomerangCard: View {
             return index
         }
         return 0
+    }
+}
+
+struct BoomerangCard_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
