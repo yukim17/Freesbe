@@ -15,6 +15,7 @@ struct ContentView: View {
                 Rectangle()
                     .ignoresSafeArea()
                     .foregroundColor(Color("BG"))
+                    .foregroundColor(Color.white)
                 
                 WaveFilled()
                 
@@ -37,7 +38,8 @@ struct ContentView: View {
                 }
                 
             }
-            .foregroundColor(Color("BG"))
+//            .foregroundColor(Color("BG"))
+            .foregroundColor(Color.white)
             
         }
     }

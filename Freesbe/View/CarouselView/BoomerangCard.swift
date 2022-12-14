@@ -48,20 +48,23 @@ struct BoomerangCard: View {
                 Text(description)
                     .fixedSize(horizontal: false, vertical: true)
                     .foregroundColor(.white)
+                
                 Button {
                     showDetails.toggle()
                 } label: {
                     Text("Show details")
                         .padding(10)
-                        .font(.title)
+                        .font(.title2)
                         .foregroundColor(.black)
                         .background(
-                            Rectangle()
+                            Capsule()
                                 .foregroundColor(.white)
-                                .cornerRadius(40)
+//                                .cornerRadius(50)
                         )
-                }
 
+                        
+                }
+                .padding(.top, 5)
                
             }
             .sheet(isPresented: $showDetails) {

@@ -29,9 +29,12 @@ struct SegmentedPickerView: View {
                 ForEach(MainCategory.allCases, id: \.self) { selection in
                     Text(selection.rawValue)
                 }
+                
             }
             .padding(.horizontal, 32)
             .pickerStyle(.segmented)
+           
+            
             
             switch selectedCategory {
             case .Feed:
@@ -53,8 +56,10 @@ struct SegmentedPickerView: View {
                 //There is a bug with the shadow of cards, you need to add a positive padding to the VStack of the cards too
                 .padding(.bottom, -50)
             }
+                
             Spacer()
         }
+        
     }
 }
 

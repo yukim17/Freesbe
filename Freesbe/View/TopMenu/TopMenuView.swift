@@ -45,6 +45,11 @@ struct TopMenuView: View {
                         .offset(x: 3)
                         .frame(width: 50, height: 50, alignment: .center)
                         .clipShape(Circle())
+                        .overlay(
+                            Circle()
+                                .stroke(.white, lineWidth: 4)
+                        )
+
                         .padding(.leading, 32)
                 }
                 
@@ -61,27 +66,41 @@ struct TopMenuView: View {
                     
                 }
                 Spacer()
-                Button {
-                    showAddNewFreesbe.toggle()
-                } label: {
-                    ZStack{
-                        Circle()
-                            .frame(width: 50, height: 50)
-                            .foregroundColor(Color("addbutton"))
-                        Circle()
-                            .stroke(style: .init(lineWidth: 2))
-                            .foregroundColor(.black.opacity(0.10))
-                            .frame(width: 38, height: 38)
-                        Circle()
-                            .stroke(style: .init(lineWidth: 1))
-                            .foregroundColor(.black.opacity(0.10))
-                            .frame(width: 45, height: 45)
-                        Image(systemName: "plus")
-                            .foregroundColor(.black)
-                            .font(.title2)
+                Spacer()
+                
+                ZStack {
+                    
+                    Image("sideBubble")
+                        .scaledToFill()
+                        .ignoresSafeArea()
+                    
+                    Button {
+                        showAddNewFreesbe.toggle()
+                    } label: {
+//                        ZStack{
+ 
+                            //                        Circle()
+                            //                            .frame(width: 50, height: 50)
+                            //                            .foregroundColor(Color("addbutton"))
+                            //                        Circle()
+                            //                            .stroke(style: .init(lineWidth: 2))
+                            //                            .foregroundColor(.black.opacity(0.10))
+                            //                            .frame(width: 38, height: 38)
+                            //                        Circle()
+                            //                            .stroke(style: .init(lineWidth: 1))
+                            //                            .foregroundColor(.black.opacity(0.10))
+                            //                            .frame(width: 45, height: 45)
+                            Image(systemName: "plus")
+                            .foregroundColor(Color("BG"))
+                                .font(.title2)
+                                .font(.system(size: 15))
+                                .padding(.trailing, 25)
+                            
+//                        }
                     }
+                    
+                    .padding(.trailing, 3)
                 }
-                .padding(.trailing, 32)
                 
                 
             }
