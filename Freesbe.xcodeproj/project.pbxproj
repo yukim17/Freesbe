@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9E4D97492948D93300F6B4E6 /* CardModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D97482948D93300F6B4E6 /* CardModelView.swift */; };
+		9E4D97522949E8CB00F6B4E6 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D974F2949E8CB00F6B4E6 /* UserInfo.swift */; };
+		9E4D97532949E8CB00F6B4E6 /* EventInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D97502949E8CB00F6B4E6 /* EventInfo.swift */; };
+		9E4D97542949E8CB00F6B4E6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D97512949E8CB00F6B4E6 /* Category.swift */; };
 		9E7A95E729474E4B00B558A2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95E629474E4B00B558A2 /* Card.swift */; };
 		9E7A95E929474EE700B558A2 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95E829474EE700B558A2 /* CarouselView.swift */; };
 		9E7A95EB29474F6500B558A2 /* BoomerangCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95EA29474F6500B558A2 /* BoomerangCard.swift */; };
@@ -28,6 +31,9 @@
 
 /* Begin PBXFileReference section */
 		9E4D97482948D93300F6B4E6 /* CardModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModelView.swift; sourceTree = "<group>"; };
+		9E4D974F2949E8CB00F6B4E6 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		9E4D97502949E8CB00F6B4E6 /* EventInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfo.swift; sourceTree = "<group>"; };
+		9E4D97512949E8CB00F6B4E6 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		9E7A95E629474E4B00B558A2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		9E7A95E829474EE700B558A2 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		9E7A95EA29474F6500B558A2 /* BoomerangCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomerangCard.swift; sourceTree = "<group>"; };
@@ -68,12 +74,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9E4D97412948D01100F6B4E6 /* ModelView */ = {
+		9E4D97412948D01100F6B4E6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				9E4D97482948D93300F6B4E6 /* CardModelView.swift */,
 			);
-			path = ModelView;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9E4D97422948D01B00F6B4E6 /* View */ = {
@@ -108,9 +114,9 @@
 		9E4D97452948D3A900F6B4E6 /* CarouselView */ = {
 			isa = PBXGroup;
 			children = (
+				9E7A95FC2947782800B558A2 /* SegmentedPickerView.swift */,
 				9E7A95E829474EE700B558A2 /* CarouselView.swift */,
 				9E7A95EA29474F6500B558A2 /* BoomerangCard.swift */,
-				9E7A95FC2947782800B558A2 /* SegmentedPickerView.swift */,
 				9E4D97432948D33500F6B4E6 /* Caught&LaunchedListView */,
 			);
 			path = CarouselView;
@@ -123,6 +129,32 @@
 				9E7A95F5294767CE00B558A2 /* TopMenuView.swift */,
 			);
 			path = TopMenu;
+			sourceTree = "<group>";
+		};
+		9E4D974C2949E8CB00F6B4E6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9E4D974D2949E8CB00F6B4E6 /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9E4D974D2949E8CB00F6B4E6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9E4D974E2949E8CB00F6B4E6 /* Models */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9E4D974E2949E8CB00F6B4E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E4D974F2949E8CB00F6B4E6 /* UserInfo.swift */,
+				9E4D97502949E8CB00F6B4E6 /* EventInfo.swift */,
+				9E4D97512949E8CB00F6B4E6 /* Category.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C125EB9C293F9931009231F4 = {
@@ -144,9 +176,10 @@
 		C125EBA7293F9932009231F4 /* Freesbe */ = {
 			isa = PBXGroup;
 			children = (
+				9E4D974C2949E8CB00F6B4E6 /* Core */,
 				C125EBA8293F9932009231F4 /* FreesbeApp.swift */,
 				9E4D97402948D00800F6B4E6 /* Model */,
-				9E4D97412948D01100F6B4E6 /* ModelView */,
+				9E4D97412948D01100F6B4E6 /* ViewModel */,
 				9E4D97422948D01B00F6B4E6 /* View */,
 				C125EBAC293F9932009231F4 /* Assets.xcassets */,
 				C125EBAE293F9932009231F4 /* Preview Content */,
@@ -236,6 +269,9 @@
 				9E4D97492948D93300F6B4E6 /* CardModelView.swift in Sources */,
 				9E8B87B729480D0A00976DB9 /* CaughtCardView.swift in Sources */,
 				9E7A95ED294761CA00B558A2 /* WaveMath.swift in Sources */,
+				9E4D97532949E8CB00F6B4E6 /* EventInfo.swift in Sources */,
+				9E4D97542949E8CB00F6B4E6 /* Category.swift in Sources */,
+				9E4D97522949E8CB00F6B4E6 /* UserInfo.swift in Sources */,
 				C125EBAB293F9932009231F4 /* ContentView.swift in Sources */,
 				9E7A95EB29474F6500B558A2 /* BoomerangCard.swift in Sources */,
 				9E8B87B32947D21F00976DB9 /* SwipeToLaunchButton.swift in Sources */,

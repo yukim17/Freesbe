@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CarouselView: View {
     //MARK: Sample Cards
-    @State var cards: [Card] = []
+    @Binding var cards : [Card]
     
     //MARK: View Properties
     @State var isBlurEnabled: Bool = true
@@ -47,9 +47,9 @@ struct CarouselView: View {
     
     //MARK: Setting up Card's
     func setupCards() {
-        for index in 1...4 {
+        /*for index in 1...4 {
             cards.append(.init(imageName: "Card \(index)", throwerAvatar:"Card 1", cardTitle: "SwiftUI with Ahmed", tag: "code", time: "14:00", location: "Collab 3-1", thrower: "Ahmed Mgua", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "))
-        }
+        } */
         
         // FOR INFINITE CARDS
         //Logic is place the first card at last
@@ -64,7 +64,7 @@ struct CarouselView: View {
 
 struct CarouselView_Previews: PreviewProvider {
     static var previews: some View {
-        CarouselView()
+        ContentView()
     }
 }
 

@@ -67,8 +67,8 @@ struct AddNewFreesbeView: View {
     
     }
     mutating func addNewFreesbe() {
-        let item = Card(imageName: "", throwerAvatar: "Antonio Palomba", cardTitle: title, tag: category, time: "Today", location: place, thrower: "Antonio Palomba", description: description)
-        arrayAddedFreesbes.append(item)
+        /* let item = Card(imageName: "", throwerAvatar: "Antonio Palomba", cardTitle: title, tag: category, time: "Today", location: place, thrower: "Antonio Palomba", description: description) */
+        //arrayAddedFreesbes.append(item)
     }
 }
 

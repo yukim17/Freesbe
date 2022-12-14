@@ -12,6 +12,13 @@ enum MainCategory: String, CaseIterable {
 }
 
 struct SegmentedPickerView: View {
+    @State var cards: [Card] = [
+        Card(imageName: "Card 1", informations: Activity(throwerAvatar: "ahmedmguaavatar", cardTitle: "Swift Cafe", tag: "Code", time: "11:30", location: "Lab-3", thrower: "Ahmed Mgua", description: "Lorem ipsum")),
+        Card(imageName: "Card 2", informations: Activity(throwerAvatar: "ahmedmguaavatar", cardTitle: "Swift Cafe", tag: "Code", time: "11:30", location: "Lab-3", thrower: "Ahmed Mgua", description: "Lorem ipsum")),
+        Card(imageName: "Card 3", informations: Activity(throwerAvatar: "ahmedmguaavatar", cardTitle: "Swift Cafe", tag: "Code", time: "11:30", location: "Lab-3", thrower: "Ahmed Mgua", description: "Lorem ipsum")),
+        Card(imageName: "Card 4", informations: Activity(throwerAvatar: "ahmedmguaavatar", cardTitle: "Swift Cafe", tag: "Code", time: "11:30", location: "Lab-3", thrower: "Ahmed Mgua", description: "Lorem ipsum"))
+    ]
+    
     let segmentedCategories = ["Feed", "Catched", "Launched"]
     @State private var selectedCategory: MainCategory = .Feed
     
@@ -35,10 +42,10 @@ struct SegmentedPickerView: View {
             
             switch selectedCategory {
             case .Feed:
-                CarouselView()
+                CarouselView(cards: $cards)
             case .Caught:
                 ScrollView(.vertical, showsIndicators: false) {
-                    CaughtCardView()
+                    CaughtCardView(arrayOfCaughtCards: $cards)
                         .padding(.top, 20)
                         
                 }
@@ -47,7 +54,7 @@ struct SegmentedPickerView: View {
                 .padding(.bottom, -50)
             case .Launched:
                 ScrollView(.vertical, showsIndicators: false) {
-                    LaunchedCardView()
+                    LaunchedCardView(arrayOfLaunchedCards: $cards)
                         .padding(.top, 20)
                 }
                 //There is a bug with the shadow of cards, you need to add a positive padding to the VStack of the cards too

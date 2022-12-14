@@ -11,22 +11,15 @@ import Foundation
 
 struct Card: Identifiable  {
     var id: String = UUID().uuidString
-    var imageName: String
     var isRotated: Bool = false
     var scale: CGFloat = 1
     var zIndex: Double = 0
-    var extraOffset : Double = 0
-    var throwerAvatar = ""
-    var cardTitle = ""
-    var tag = ""
-    var time = ""
-    var location = ""
-    var thrower = ""
-    var description = ""
+    var extraOffset: Double = 0
+    var imageName: String = ""
+    var informations: Activity
 }
 
 struct Activity {
-    var imageName: String
     var throwerAvatar = ""
     var cardTitle = ""
     var tag = ""

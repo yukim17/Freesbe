@@ -79,8 +79,8 @@ struct BoomerangCard: View {
         }
     }
     func indexNote() {
-        title = cards[currentIndex].cardTitle
-        description = cards[currentIndex].description
+        title = cards[currentIndex].informations.cardTitle
+        description = cards[currentIndex].informations.description
     }
     //MARK: Gesture Calls
     func onChanged(value: DragGesture.Value) {

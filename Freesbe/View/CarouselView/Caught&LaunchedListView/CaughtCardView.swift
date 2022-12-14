@@ -8,15 +8,7 @@
 import SwiftUI
 
 struct CaughtCardView: View {
-    let arrayOfCaughtCards = [
-        Card(imageName: "", throwerAvatar:"Card 1", cardTitle: "SwiftUI with Ahmed", tag: "code", time: "14:00", location: "Collab 3-1", thrower: "Ahmed Mgua", description: "test"),
-        Card(imageName: "", throwerAvatar:"Card 1", cardTitle: "SwiftUI with Ahmed", tag: "code", time: "14:00", location: "Collab 3-1", thrower: "Ahmed Mgua", description: "test"),
-        Card(imageName: "", throwerAvatar:"Card 1", cardTitle: "SwiftUI with Ahmed", tag: "code", time: "14:00", location: "Collab 3-1", thrower: "Ahmed Mgua", description: "test"),
-        Card(imageName: "", throwerAvatar:"Card 1", cardTitle: "SwiftUI with Ahmed", tag: "code", time: "14:00", location: "Collab 3-1", thrower: "Ahmed Mgua", description: "test"),
-        Card(imageName: "", throwerAvatar:"Card 1", cardTitle: "SwiftUI with Ahmed", tag: "code", time: "14:00", location: "Collab 3-1", thrower: "Ahmed Mgua", description: "test"),
-        Card(imageName: "", throwerAvatar:"Card 1", cardTitle: "SwiftUI with Ahmed", tag: "code", time: "14:00", location: "Collab 3-1", thrower: "Ahmed Mgua", description: "test"),
-        Card(imageName: "", throwerAvatar:"Card 1", cardTitle: "SwiftUI with Ahmed", tag: "code", time: "14:00", location: "Collab 3-1", thrower: "Ahmed Mgua", description: "test")
-        ]
+    @Binding var arrayOfCaughtCards: [Card]
         
     
     @State var infoModal = false
@@ -33,7 +25,7 @@ struct CaughtCardView: View {
                         HStack {
                             HStack {
                                 VStack(alignment: .leading) {
-                                    Text(card.cardTitle)
+                                    Text(card.informations.cardTitle)
                                         .font(.title3.bold())
                                     
                                     /* Text(card.tag)
@@ -42,9 +34,9 @@ struct CaughtCardView: View {
                                      .cornerRadius(10)
                                      .padding(-5) */
                                     
-                                    Text("Time: \(card.time)")
-                                    Text("Location: \(card.location)")
-                                    Text("Thrower: \(card.thrower)")
+                                    Text("Time: \(card.informations.time)")
+                                    Text("Location: \(card.informations.location)")
+                                    Text("Thrower: \(card.informations.thrower)")
                                     
                                 }
                                 .foregroundColor(.black)
@@ -58,7 +50,7 @@ struct CaughtCardView: View {
                         infoModal.toggle()
                         
                     } label: {
-                            Image(card.throwerAvatar)
+                        Image(card.informations.throwerAvatar)
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 120, height: 120)
@@ -88,6 +80,6 @@ struct CaughtCardView: View {
 
 struct CaughtCardView_Previews: PreviewProvider {
     static var previews: some View {
-        CaughtCardView()
+        ContentView()
     }
 }
