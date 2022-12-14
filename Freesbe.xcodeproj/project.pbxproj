@@ -24,6 +24,8 @@
 		C125EBAB293F9932009231F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125EBAA293F9932009231F4 /* ContentView.swift */; };
 		C125EBAD293F9932009231F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C125EBAC293F9932009231F4 /* Assets.xcassets */; };
 		C125EBB0293F9932009231F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C125EBAF293F9932009231F4 /* Preview Assets.xcassets */; };
+		F27DB2C5294A2F3500AEFE5F /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27DB2C4294A2F3500AEFE5F /* ModalView.swift */; };
+		F27DB2C7294A2F6200AEFE5F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27DB2C6294A2F6200AEFE5F /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		C125EBAA293F9932009231F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C125EBAC293F9932009231F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C125EBAF293F9932009231F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F27DB2C4294A2F3500AEFE5F /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		F27DB2C6294A2F6200AEFE5F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,9 @@
 				9E4D97462948D49C00F6B4E6 /* TopMenu */,
 				9E4D97452948D3A900F6B4E6 /* CarouselView */,
 				9E4D97442948D37900F6B4E6 /* NewFreesbe */,
+				F27DB2C3294A2F2000AEFE5F /* ModalView */,
 				C125EBAA293F9932009231F4 /* ContentView.swift */,
+				F27DB2C6294A2F6200AEFE5F /* Extensions.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +168,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F27DB2C3294A2F2000AEFE5F /* ModalView */ = {
+			isa = PBXGroup;
+			children = (
+				F27DB2C4294A2F3500AEFE5F /* ModalView.swift */,
+			);
+			path = ModalView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,6 +248,7 @@
 			files = (
 				9E7A960729478C7000B558A2 /* LaunchedCardView.swift in Sources */,
 				9E4D97492948D93300F6B4E6 /* CardModelView.swift in Sources */,
+				F27DB2C5294A2F3500AEFE5F /* ModalView.swift in Sources */,
 				9E8B87B729480D0A00976DB9 /* CaughtCardView.swift in Sources */,
 				9E7A95ED294761CA00B558A2 /* WaveMath.swift in Sources */,
 				C125EBAB293F9932009231F4 /* ContentView.swift in Sources */,
@@ -245,6 +260,7 @@
 				9E7A95FD2947782800B558A2 /* SegmentedPickerView.swift in Sources */,
 				9E7A95EF2947631B00B558A2 /* WaveFilled.swift in Sources */,
 				9E7A95E929474EE700B558A2 /* CarouselView.swift in Sources */,
+				F27DB2C7294A2F6200AEFE5F /* Extensions.swift in Sources */,
 				9E7A95F42947676400B558A2 /* TopMenuModel.swift in Sources */,
 				C125EBA9293F9932009231F4 /* FreesbeApp.swift in Sources */,
 			);

@@ -62,16 +62,8 @@ struct LaunchedCardView: View {
                     
                 }
                 .sheet(isPresented: $infoModal) {
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(.white)
-                            .padding(.bottom, -50)
-                        Image("testdetails")
-                            .resizable()
-                            .scaledToFill()
-                            .padding(.bottom, -50)
-                            .presentationDetents([.bar])
-                    }
+                    ModalView()
+                        .presentationDetents([.smallView, .largeView])
                 }
                 
                 
