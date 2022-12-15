@@ -53,10 +53,9 @@ struct TopMenuView: View {
                 
                 VStack(alignment: .leading) {
                     Text("Happy \(TopMenu().dayOfTheWeek)")
-                        .foregroundColor(.white)
                     Text(TopMenu().personalName)
                         .font(.title.bold())
-                        .foregroundColor(.white)
+                        
                     
                     
                 }
@@ -65,28 +64,18 @@ struct TopMenuView: View {
                     showAddNewFreesbe.toggle()
                 } label: {
                     ZStack{
-                        Circle()
-                            .frame(width: 50, height: 50)
-                            .foregroundColor(Color("addbutton"))
-                        Circle()
-                            .stroke(style: .init(lineWidth: 2))
-                            .foregroundColor(.black.opacity(0.10))
-                            .frame(width: 38, height: 38)
-                        Circle()
-                            .stroke(style: .init(lineWidth: 1))
-                            .foregroundColor(.black.opacity(0.10))
-                            .frame(width: 45, height: 45)
-                        Image(systemName: "plus")
-                            .foregroundColor(.black)
-                            .font(.title2)
+                        Image("topplusbutton")
+                            .resizable()
+                            .frame(width: 70, height: 42)
                     }
                 }
-                .padding(.trailing, 32)
+                
                 
                 
             }
             
         }
+        .foregroundColor(Color("paletteTitle"))
         .padding(.top, 10)
         .sheet(isPresented: $showAddNewFreesbe) {
             AddNewFreesbeView()
@@ -99,7 +88,7 @@ struct TopMenuView: View {
 
 struct TopMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        TopMenuView(isActive: .constant(false)).preferredColorScheme(.dark)
+        TopMenuView(isActive: .constant(false)).preferredColorScheme(.light)
         
     }
 }

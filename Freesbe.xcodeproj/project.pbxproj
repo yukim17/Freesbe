@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E111C4D294B6EBB00FD98B3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E111C4C294B6EBB00FD98B3 /* CardView.swift */; };
 		9E4D97492948D93300F6B4E6 /* CardModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D97482948D93300F6B4E6 /* CardModelView.swift */; };
 		9E4D97522949E8CB00F6B4E6 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D974F2949E8CB00F6B4E6 /* UserInfo.swift */; };
 		9E4D97532949E8CB00F6B4E6 /* EventInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D97502949E8CB00F6B4E6 /* EventInfo.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E111C4C294B6EBB00FD98B3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		9E4D97482948D93300F6B4E6 /* CardModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModelView.swift; sourceTree = "<group>"; };
 		9E4D974F2949E8CB00F6B4E6 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		9E4D97502949E8CB00F6B4E6 /* EventInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfo.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		9E4D97432948D33500F6B4E6 /* Caught&LaunchedListView */ = {
 			isa = PBXGroup;
 			children = (
+				9E111C4C294B6EBB00FD98B3 /* CardView.swift */,
 				9E7A960629478C7000B558A2 /* LaunchedCardView.swift */,
 				9E8B87B629480D0A00976DB9 /* CaughtCardView.swift */,
 			);
@@ -272,6 +275,7 @@
 				9E4D97532949E8CB00F6B4E6 /* EventInfo.swift in Sources */,
 				9E4D97542949E8CB00F6B4E6 /* Category.swift in Sources */,
 				9E4D97522949E8CB00F6B4E6 /* UserInfo.swift in Sources */,
+				9E111C4D294B6EBB00FD98B3 /* CardView.swift in Sources */,
 				C125EBAB293F9932009231F4 /* ContentView.swift in Sources */,
 				9E7A95EB29474F6500B558A2 /* ActivityCardView.swift in Sources */,
 				9E8B87B32947D21F00976DB9 /* SwipeToLaunchButton.swift in Sources */,

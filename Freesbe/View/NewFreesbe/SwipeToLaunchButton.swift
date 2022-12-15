@@ -48,11 +48,11 @@ struct SwipeToLaunchButton: View {
                   }.background(
                     ZStack {
                         RoundedRectangle(cornerRadius: 50)
-                            .foregroundColor(Color("BG"))
+                            .foregroundColor(Color("paletteCard"))
                             .frame(width: 300,height: 70)
                         Text("Swipe to Launch!")
                             .font(.title3.bold())
-                            .foregroundColor(.white)
+                            .foregroundColor(Color("paletteTitle"))
                     }
                 )
     }

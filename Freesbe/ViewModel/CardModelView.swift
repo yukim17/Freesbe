@@ -14,4 +14,6 @@ class FreesbeDB: ObservableObject {
         Card(imageName: "Card 3", informations: Activity(throwerAvatar: "ahmedmguaavatar", cardTitle: "Swift Cafe", tag: "Code", time: "11:30", location: "Lab-3", thrower: "Ahmed Mgua", description: "Lorem ipsum")),
         Card(imageName: "Card 4", informations: Activity(throwerAvatar: "ahmedmguaavatar", cardTitle: "Swift Cafe", tag: "Code", time: "11:30", location: "Lab-3", thrower: "Ahmed Mgua", description: "Lorem ipsum"))
     ]
+    
+    @Published var events: [EventInfo] = Array(repeating: .example, count: 10)
 }

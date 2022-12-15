@@ -19,8 +19,8 @@ struct SegmentedPickerView: View {
         
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named: "addbutton")
         UISegmentedControl.appearance().backgroundColor = UIColor(named: "SegmentedPickerBG")
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .selected)
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(named: "paletteTitle")], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
     }
     
     var body: some View {
@@ -30,27 +30,38 @@ struct SegmentedPickerView: View {
                     Text(selection.rawValue)
                 }
             }
+            .frame(width: 340)
+            .padding(.top, 30)
             .pickerStyle(.segmented)
             
             switch selectedCategory {
             case .Feed:
-                StackOfActivityCardsView()
-            case .Caught:
-                ScrollView(.vertical, showsIndicators: false) {
-                    Text("List of caught activities")
+                VStack {
+                    Spacer()
+                    StackOfActivityCardsView()
+                    
                         
                 }
+            case .Caught:
+                HStack(alignment: .top) {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        CaughtCardView(arrayOfCaughtCards: EventInfo.arrayOfAcceptedEvents)
+                    }
+                }
             case .Launched:
-                ScrollView(.vertical, showsIndicators: false) {
-                    Text("List of launched activities")
+                HStack(alignment: .top) {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        LaunchedCardView(arrayOfLaunchedCards: EventInfo.arrayOfLaunchedEvents)
+                    }
                 }
             }
         }
+        Spacer()
     }
 }
 
 struct SegmentedPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        SegmentedPickerView()
+        ContentView()
     }
 }

@@ -15,11 +15,21 @@ extension View {
 }
 
 struct StackOfActivityCardsView: View {
-    @State private var cards = Array<EventInfo>(repeating: EventInfo.example, count: 10)
+    @State private var cards:[EventInfo] = EventInfo.arrayOfAcceptedEvents
     @State private var showingEditScreen = false
     var body: some View {
         ZStack {
             VStack {
+                Spacer()
+                Text(EventInfo.example.title)
+                    .font(.title)
+                    .foregroundColor(Color("paletteMain"))
+                Text(EventInfo.example.category.name)
+                    .font(.title2)
+                    .padding(8)
+                    .foregroundColor(.white)
+                    .background(RoundedRectangle(cornerRadius: 40).fill(Color("paletteMain")))
+                    .padding(.top, -15)
                 ZStack {
                     ForEach(0..<cards.count, id: \.self) { index in
                         ActivityCardView(card: cards[index]) {
@@ -41,14 +51,15 @@ struct StackOfActivityCardsView: View {
                         Image(systemName: "arrow.uturn.forward.circle")
                     }
                 }
-                Button {
-                    showingEditScreen.toggle()
-                } label: {
-                    Image(systemName: "plus.circle")
-                }
-                .padding(.top, 50)
-
+                Spacer(minLength: 70)
+                Image(systemName: "hand.wave.fill")
+                    .font(.largeTitle)
+                    .frame(width: 50, height: 50)
+                    .foregroundColor(Color("paletteMain"))
+                    .background(Circle().stroke(Color("paletteMain"), lineWidth: 2))
+                
             }
+            .ignoresSafeArea()
             .sheet(isPresented: $showingEditScreen, onDismiss:  resetCards) {
                 Text("lol")
             }

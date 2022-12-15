@@ -14,26 +14,18 @@ struct ContentView: View {
             ZStack {
                 Rectangle()
                     .ignoresSafeArea()
-                    .foregroundColor(Color("BG"))
+                    .foregroundColor(.white)
                 
                 WaveFilled()
                 
                 VStack {
                     TopMenuView(isActive: $isActive)
                     NavigationLink(destination: Text(""), isActive: $isActive) {
-                        
                     }
                     .labelsHidden()
                     
                     SegmentedPickerView()
-                        .padding(.top, 60)
-                    
-                    
-                    
-                    
-                    Spacer(minLength: 10)
-                    
-                    
+                        
                 }
                 
             }
