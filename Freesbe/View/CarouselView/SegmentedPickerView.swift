@@ -12,14 +12,7 @@ enum MainCategory: String, CaseIterable {
 }
 
 struct SegmentedPickerView: View {
-    @State var cards: [Card] = [
-        Card(imageName: "Card 1", informations: Activity(throwerAvatar: "ahmedmguaavatar", cardTitle: "Swift Cafe", tag: "Code", time: "11:30", location: "Lab-3", thrower: "Ahmed Mgua", description: "Lorem ipsum")),
-        Card(imageName: "Card 2", informations: Activity(throwerAvatar: "ahmedmguaavatar", cardTitle: "Swift Cafe", tag: "Code", time: "11:30", location: "Lab-3", thrower: "Ahmed Mgua", description: "Lorem ipsum")),
-        Card(imageName: "Card 3", informations: Activity(throwerAvatar: "ahmedmguaavatar", cardTitle: "Swift Cafe", tag: "Code", time: "11:30", location: "Lab-3", thrower: "Ahmed Mgua", description: "Lorem ipsum")),
-        Card(imageName: "Card 4", informations: Activity(throwerAvatar: "ahmedmguaavatar", cardTitle: "Swift Cafe", tag: "Code", time: "11:30", location: "Lab-3", thrower: "Ahmed Mgua", description: "Lorem ipsum"))
-    ]
     
-    let segmentedCategories = ["Feed", "Catched", "Launched"]
     @State private var selectedCategory: MainCategory = .Feed
     
     init() {
@@ -37,30 +30,21 @@ struct SegmentedPickerView: View {
                     Text(selection.rawValue)
                 }
             }
-            .padding(.horizontal, 32)
             .pickerStyle(.segmented)
             
             switch selectedCategory {
             case .Feed:
-                CarouselView(cards: $cards)
+                StackOfActivityCardsView()
             case .Caught:
                 ScrollView(.vertical, showsIndicators: false) {
-                    CaughtCardView(arrayOfCaughtCards: $cards)
-                        .padding(.top, 20)
+                    Text("List of caught activities")
                         
                 }
-                //There is a bug with the shadow of cards, you need to add a positive padding to the VStack of the cards too
-                //.padding(.horizontal, -20)
-                .padding(.bottom, -50)
             case .Launched:
                 ScrollView(.vertical, showsIndicators: false) {
-                    LaunchedCardView(arrayOfLaunchedCards: $cards)
-                        .padding(.top, 20)
+                    Text("List of launched activities")
                 }
-                //There is a bug with the shadow of cards, you need to add a positive padding to the VStack of the cards too
-                .padding(.bottom, -50)
             }
-            Spacer()
         }
     }
 }

@@ -12,8 +12,8 @@
 		9E4D97532949E8CB00F6B4E6 /* EventInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D97502949E8CB00F6B4E6 /* EventInfo.swift */; };
 		9E4D97542949E8CB00F6B4E6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D97512949E8CB00F6B4E6 /* Category.swift */; };
 		9E7A95E729474E4B00B558A2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95E629474E4B00B558A2 /* Card.swift */; };
-		9E7A95E929474EE700B558A2 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95E829474EE700B558A2 /* CarouselView.swift */; };
-		9E7A95EB29474F6500B558A2 /* BoomerangCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95EA29474F6500B558A2 /* BoomerangCard.swift */; };
+		9E7A95E929474EE700B558A2 /* StackOfActivitiesCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95E829474EE700B558A2 /* StackOfActivitiesCardView.swift */; };
+		9E7A95EB29474F6500B558A2 /* ActivityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95EA29474F6500B558A2 /* ActivityCardView.swift */; };
 		9E7A95ED294761CA00B558A2 /* WaveMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95EC294761CA00B558A2 /* WaveMath.swift */; };
 		9E7A95EF2947631B00B558A2 /* WaveFilled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95EE2947631B00B558A2 /* WaveFilled.swift */; };
 		9E7A95F42947676400B558A2 /* TopMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A95F32947676400B558A2 /* TopMenuModel.swift */; };
@@ -35,8 +35,8 @@
 		9E4D97502949E8CB00F6B4E6 /* EventInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfo.swift; sourceTree = "<group>"; };
 		9E4D97512949E8CB00F6B4E6 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		9E7A95E629474E4B00B558A2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		9E7A95E829474EE700B558A2 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
-		9E7A95EA29474F6500B558A2 /* BoomerangCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomerangCard.swift; sourceTree = "<group>"; };
+		9E7A95E829474EE700B558A2 /* StackOfActivitiesCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOfActivitiesCardView.swift; sourceTree = "<group>"; };
+		9E7A95EA29474F6500B558A2 /* ActivityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardView.swift; sourceTree = "<group>"; };
 		9E7A95EC294761CA00B558A2 /* WaveMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveMath.swift; sourceTree = "<group>"; };
 		9E7A95EE2947631B00B558A2 /* WaveFilled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveFilled.swift; sourceTree = "<group>"; };
 		9E7A95F32947676400B558A2 /* TopMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuModel.swift; sourceTree = "<group>"; };
@@ -115,8 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				9E7A95FC2947782800B558A2 /* SegmentedPickerView.swift */,
-				9E7A95E829474EE700B558A2 /* CarouselView.swift */,
-				9E7A95EA29474F6500B558A2 /* BoomerangCard.swift */,
+				9E7A95E829474EE700B558A2 /* StackOfActivitiesCardView.swift */,
+				9E7A95EA29474F6500B558A2 /* ActivityCardView.swift */,
 				9E4D97432948D33500F6B4E6 /* Caught&LaunchedListView */,
 			);
 			path = CarouselView;
@@ -273,14 +273,14 @@
 				9E4D97542949E8CB00F6B4E6 /* Category.swift in Sources */,
 				9E4D97522949E8CB00F6B4E6 /* UserInfo.swift in Sources */,
 				C125EBAB293F9932009231F4 /* ContentView.swift in Sources */,
-				9E7A95EB29474F6500B558A2 /* BoomerangCard.swift in Sources */,
+				9E7A95EB29474F6500B558A2 /* ActivityCardView.swift in Sources */,
 				9E8B87B32947D21F00976DB9 /* SwipeToLaunchButton.swift in Sources */,
 				9E7A95E729474E4B00B558A2 /* Card.swift in Sources */,
 				9E7A95F6294767CE00B558A2 /* TopMenuView.swift in Sources */,
 				9E8B87B12947C8BB00976DB9 /* AddNewFreesbeView.swift in Sources */,
 				9E7A95FD2947782800B558A2 /* SegmentedPickerView.swift in Sources */,
 				9E7A95EF2947631B00B558A2 /* WaveFilled.swift in Sources */,
-				9E7A95E929474EE700B558A2 /* CarouselView.swift in Sources */,
+				9E7A95E929474EE700B558A2 /* StackOfActivitiesCardView.swift in Sources */,
 				9E7A95F42947676400B558A2 /* TopMenuModel.swift in Sources */,
 				C125EBA9293F9932009231F4 /* FreesbeApp.swift in Sources */,
 			);

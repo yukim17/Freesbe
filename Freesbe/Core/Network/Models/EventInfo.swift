@@ -16,4 +16,6 @@ struct EventInfo: Decodable {
     var category: Category
     var creator: UserInfo
     var participants: [UserInfo]?
+    
+    static let example = EventInfo(title: "Swift Cafe", description: "hellow", date: "12:00", place: "Lab-3", category: Category(name: "Code", color: "blue", description: "Improve your coding skills"), creator: UserInfo(name: "Ahmed", surname: "Mgua", username: "iamahmed"))
 }
