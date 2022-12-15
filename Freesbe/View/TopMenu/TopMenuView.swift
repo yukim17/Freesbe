@@ -68,40 +68,33 @@ struct TopMenuView: View {
                 Spacer()
                 Spacer()
                 
+                
+                
                 ZStack {
-                    
                     Image("sideBubble")
                         .scaledToFill()
                         .ignoresSafeArea()
                     
                     Button {
-                        showAddNewFreesbe.toggle()
+                        withAnimation(.spring()) {
+                            showAddNewFreesbe.toggle()
+                        }
                     } label: {
-//                        ZStack{
- 
-                            //                        Circle()
-                            //                            .frame(width: 50, height: 50)
-                            //                            .foregroundColor(Color("addbutton"))
-                            //                        Circle()
-                            //                            .stroke(style: .init(lineWidth: 2))
-                            //                            .foregroundColor(.black.opacity(0.10))
-                            //                            .frame(width: 38, height: 38)
-                            //                        Circle()
-                            //                            .stroke(style: .init(lineWidth: 1))
-                            //                            .foregroundColor(.black.opacity(0.10))
-                            //                            .frame(width: 45, height: 45)
+                        
+                        ZStack {
+
                             Image(systemName: "plus")
-                            .foregroundColor(Color("BG"))
+                                .foregroundColor(Color("BG"))
                                 .font(.title2)
                                 .font(.system(size: 15))
                                 .padding(.trailing, 25)
                             
-//                        }
+                           
+                        }
+                        
                     }
-                    
                     .padding(.trailing, 3)
                 }
-                
                 
             }
             
@@ -122,3 +115,24 @@ struct TopMenuView_Previews: PreviewProvider {
         
     }
 }
+
+
+struct Bubble: Shape {
+    var yOffset: CGFloat = 0.5
+    
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+            
+            path.move(to: .zero)
+            path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+            path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+            
+            
+            path.addCurve(to: CGPoint(x: rect.minX, y: rect.maxY),
+                          control1: CGPoint(x: rect.maxY * 1.25, y: rect.midY - (rect.maxY * yOffset)),
+                          control2: CGPoint(x: rect.maxX * 0.25, y: rect.maxY * 1.5 + (rect.maxY * yOffset)))
+            path.closeSubpath()
+        return path
+        }
+    }
+

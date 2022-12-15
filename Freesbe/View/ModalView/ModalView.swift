@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ModalView: View {
     @Environment(\.dismiss) var dismiss
+    @State private var showingAlert = false
     @State private var hasJoined = false
     
     var body: some View {
@@ -27,15 +28,15 @@ struct ModalView: View {
                     descriptionView
                     Spacer()
                     Spacer()
-                    buttonView
-                    Spacer()
+//                    buttonView
+//                    Spacer()
                 }
                 .padding(.top)
             }
             .ignoresSafeArea()
-            .padding(.top, -15)
+            .padding(.top, -25)
         }
-        .background(.white)
+        .background(Color("modalBG"))
     }
 }
 
@@ -82,7 +83,7 @@ extension ModalView {
             //MARK: View variant with number participants
             HStack {
                 Image(systemName: "person.2.fill")
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color("BG"))
                     .font(.system(size: 22))
                 Text("10")
                     .foregroundColor(.black)
@@ -94,28 +95,46 @@ extension ModalView {
             //MARK: Category or joined status
             if hasJoined {
                 HStack {
-                    Image(systemName: "checkmark.circle")
-                        .foregroundColor(Color(.systemGreen))
-                        .font(.system(size: 32))
-                    
-                    Text("You joined")
-                        .font(.subheadline).bold()
-                        .frame(width: 120, height: 38)
-                        .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 0.75))
-                        .background(
-                            RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Color.black))
-                        .foregroundColor(.white)
+                    //                    Image(systemName: "checkmark.circle")
+                    //                        .foregroundColor(Color(.systemGreen))
+                    //                        .font(.system(size: 32))
+                    Button {
+                        withAnimation {
+                            showingAlert = true
+                        }
+                    } label: {
+                        Text("You joined")
+                            .font(.subheadline).bold()
+                            .frame(width: 120, height: 38)
+                            .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 0.75))
+                            .background(
+                                RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Color.black))
+                            .foregroundColor(.white)
+                    }
+                    .alert("Leave this event?", isPresented: $showingAlert) {
+                        Button("OK", role: .cancel) {
+                            withAnimation {
+                                hasJoined.toggle()
+                            }
+                        }
+                        Button("Cancel", role: .destructive) { }
+                    }
                 }
-                
             } else {
                 HStack {
-                    Text("Coding")
-                        .font(.subheadline).bold()
-                        .frame(width: 80, height: 38)
-                        .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 0.75))
-                        .background(
-                            RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Color.blue))
-                        .foregroundColor(.white)
+                    Button {
+                        withAnimation {
+                            hasJoined.toggle()
+                        }
+                    } label: {
+                        Text("Join")
+                            .font(.subheadline).bold()
+                            .frame(width: 80, height: 38)
+                            .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 0.75))
+                            .background(
+                                RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Color("BG")))
+                            .foregroundColor(.white)
+                    }
                 }
             }
         }
@@ -126,72 +145,102 @@ extension ModalView {
     var rectangleBackground: some View {
         Rectangle()
             .cornerRadius(15, corners: [.topLeft, .topRight])
-        
+            
             .foregroundColor(.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 30)
                     .stroke(Color.gray.opacity(0.2), lineWidth: 1)
-                    .background(.mint)
-                    .opacity(0.3)
+                    .background(.white)
+//                    .opacity(0.3)
             )
             .shadow(color: Color.gray.opacity(0.4), radius: 4)
             .padding(.top)
-            .background(.white)
+//            .background(Color("modalBG"))
     }
     
     //MARK: topic info
     var topicView: some View {
         HStack {
-            Text("SwiftUI Interlude course")
-                .font(.system(size: 35)).bold()
-                .foregroundColor(.black)
-                .padding([.leading, .trailing, .top])
+            VStack(alignment: .leading) {
+                Text("SwiftUI and UIKit party ")
+                    .font(.system(size: 35)).bold()
+                    .foregroundColor(.black)
+                    .padding([.leading, .trailing, .top])
+                    .lineLimit(2)
+                HStack {
+                    Text("by Ahmed")
+                    //                    .padding([.leading, .trailing])
+                        .multilineTextAlignment(.leading)
+                        .padding([.leading, .trailing])
+                        .font(.system(size: 25).bold())
+                    //                    .opacity(0.99)
+                        .foregroundColor(Color("BG"))
+                    
+//                    Image(systemName: "keyboard")
+//                        .offset(x: -15)
+                }
+            }
+        
+            
+            
             
             Spacer()
             
+            
             //it's just a "placeholder" - need to decide
-            Image("Card 1")
+            Image("ahmed")
                 .resizable()
-                .frame(width: 56, height: 56)
+                .frame(width: 88, height: 88)
                 .foregroundColor(.blue)
                 .padding([.top, .trailing])
+                .padding(.trailing, 20)
+                
         }
     }
     
     //MARK: date and location info
     var infoView: some View {
-        HStack {
-            Image(systemName: "calendar")
-                .foregroundColor(.black)
-                .frame(width: 28, height: 28, alignment: .leading)
+        HStack (spacing: 35) {
+            HStack(spacing: -10) {
+                Image(systemName: "calendar")
+                    .foregroundColor(.black)
+                    .frame(width: 40, height: 40, alignment: .leading)
+                    .font(.system(size: 19))
+                
+                Text("31.12")
+                    .font(.system(size: 19))
+//                    .offset(x: -11)
+                    .foregroundColor(.black)
+            }
             
-            Text("31 December")
-                .font(.system(size: 15))
-                .offset(x: -11)
-                .foregroundColor(.black)
-            
-            HStack {
+            HStack(spacing: -10) {
                 Image(systemName: "clock")
                     .foregroundColor(.black)
-                    .frame(width: 28, height: 28, alignment: .leading)
-                
+                    .frame(width: 40, height: 40, alignment: .leading)
+                    .font(.system(size: 19))
                 Text("12:00")
-                    .font(.system(size: 15))
-                    .offset(x: -11)
+                    .font(.system(size: 19))
+//                    .offset(x: -11)
                     .foregroundColor(.black)
+            }
+//            .padding(.leading, 5)
+
+//            Spacer()
+            HStack(spacing: -10) {
+                Image(systemName: "location.fill")
+                    .foregroundColor(Color("BG"))
+                    .frame(width: 40, height: 40, alignment: .leading)
+                    .font(.system(size: 19))
+                Text("Collab 03-02")
+                    .font(.system(size: 19))
+//                    .offset(x: -12)
+                    .foregroundColor(.black)
+                    .lineLimit(1)
             }
             
-            HStack {
-                Image(systemName: "location.fill")
-                    .foregroundColor(.mint)
-                    .frame(width: 28, height: 28, alignment: .leading)
-                
-                Text("Collab 03-02")
-                    .font(.system(size: 15))
-                    .offset(x: -12)
-                    .foregroundColor(.black)
-            }
-            .frame(maxWidth: .infinity, alignment: .trailing)
+//            .padding(.trailing, 30)
+//            .frame(maxWidth: .infinity, alignment: .trailing)
+//            .padding(.trailing, 35)
         }
     }
     

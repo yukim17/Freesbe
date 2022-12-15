@@ -26,6 +26,6 @@ struct RoundedCorner: Shape {
 
 //MARK: fraction statics
 extension PresentationDetent {
-    static let smallView = Self.fraction(0.7)
+    static let smallView = Self.fraction(0.65)
     static let largeView = Self.fraction(0.9)
 }
