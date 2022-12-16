@@ -14,6 +14,8 @@ struct AddNewFreesbeView: View {
     var arrayOfCategories = ["Code", "Design", "Business", "Games", "Social", "Others"]
     var arrayOfPlaces = ["Lab 1", "Lab 2", "Lab 3"]
     var pickImage = ["Load image from phone", "Load iamge from your Drive"]
+    @Environment(\.dismiss) var dismiss
+
     
     @State private var title = ""
     @State private var category = "Code"
@@ -59,12 +61,22 @@ struct AddNewFreesbeView: View {
                     }
                     
                 }
+                /*Button {
+                  done()
+                } label: {
+                    Text("Launch your activity")
+                }*/
+                
+                
             }
-            SwipeToLaunchButton()
+            SwipeToLaunchButton(action: done)
             
         }
         .preferredColorScheme(.light)
-    
+        
+    }
+    func done() {
+        dismiss()
     }
     mutating func addNewFreesbe() {
         /* let item = Card(imageName: "", throwerAvatar: "Antonio Palomba", cardTitle: title, tag: category, time: "Today", location: place, thrower: "Antonio Palomba", description: description) */

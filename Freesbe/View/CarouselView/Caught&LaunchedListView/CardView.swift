@@ -46,7 +46,7 @@ struct CardView: View {
                        .background(Circle().fill(.blue))
                        .frame(width: 80, height: 80)
                        .overlay {
-                           Image("avatar")
+                           Image(card.creator.username)
                                .resizable()
                                .scaledToFill()
                                .mask(Circle().frame(width: 76))
@@ -73,6 +73,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: EventInfo.example)
+        ContentView()
     }
 }

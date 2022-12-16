@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct LaunchedCardView: View {
-    var arrayOfLaunchedCards: [EventInfo]
+    var arrayOfLaunchedCards: [EventInfo] = FreesbeDB().arrayOfLaunchedEvents
     @State var infoModal = false
+    
     var body: some View {
         VStack {
-            ForEach(EventInfo.arrayOfLaunchedEvents) { card in
+            ForEach(arrayOfLaunchedCards) { index in
                 VStack(alignment: .leading){
-                    CardView(card: card)
+                    CardView(card: index)
                         .frame(height: 220)
                 }
                 .sheet(isPresented: $infoModal) {

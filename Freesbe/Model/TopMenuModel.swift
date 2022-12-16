@@ -8,7 +8,7 @@
 import Foundation
 
 struct TopMenu {
-    var personalImage : String = "avatar"
+    var personalImage : String = "iamvitaliy"
     var dayOfTheWeek : String = "Wednesday"
     var personalName : String = "Vitaliy"
 }

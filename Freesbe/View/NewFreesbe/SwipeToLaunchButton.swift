@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct SwipeToLaunchButton: View {
-    @State var viewState = CGSize(width: 40, height: 50)
-    var body: some View {
-        HStack{
+    @State var viewState = CGSize(width: 45, height: 50)
+    private let feedback = UINotificationFeedbackGenerator()
 
+    var action: (() -> Void)? = nil
+    
+    var body: some View {
+        HStack {
                ZStack {
 
                     Image("freesbeempty")
@@ -25,6 +28,8 @@ struct SwipeToLaunchButton: View {
                                   .onEnded { value in
                                       withAnimation(.spring()) {
                                           viewState = CGSize(width: 40, height: 50)
+                                          feedback.notificationOccurred(.success)
+                                          action?()
                                       }
                                   }
                            )
@@ -33,7 +38,13 @@ struct SwipeToLaunchButton: View {
                         .offset(x: viewState.width)
                         .gesture(
                             DragGesture().onChanged { value in
+                                
                                  viewState = value.translation
+                                
+                                if value.translation.width > 275 {
+                                    feedback.notificationOccurred(.success)
+                                   // action?()
+                                }
                             }
                                  .onEnded { value in
                                       withAnimation(.spring()) {
@@ -41,9 +52,7 @@ struct SwipeToLaunchButton: View {
                                       }
                                  }
                          )
-
                       }
-
                      Spacer()
                   }.background(
                     ZStack {

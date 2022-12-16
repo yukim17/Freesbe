@@ -77,6 +77,7 @@ struct ActivityCardView: View {
                         // feedback.notificationOccurred(.error)
                         
                     }  else if translation > 100 {
+                        feedback.notificationOccurred(.success)
                         isModalShown = true
                         withAnimation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0.6)){
                             offset = .zero

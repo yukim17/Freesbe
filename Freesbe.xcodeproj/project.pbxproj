@@ -24,6 +24,8 @@
 		9E8B87B12947C8BB00976DB9 /* AddNewFreesbeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B87B02947C8BB00976DB9 /* AddNewFreesbeView.swift */; };
 		9E8B87B32947D21F00976DB9 /* SwipeToLaunchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B87B22947D21F00976DB9 /* SwipeToLaunchButton.swift */; };
 		9E8B87B729480D0A00976DB9 /* CaughtCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B87B629480D0A00976DB9 /* CaughtCardView.swift */; };
+		9E98844E294BF6DE00E4A122 /* PJRPulseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E98844D294BF6DE00E4A122 /* PJRPulseButton.swift */; };
+		9E988451294BFB0800E4A122 /* InformationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E988450294BFB0800E4A122 /* InformationsView.swift */; };
 		C125EBA9293F9932009231F4 /* FreesbeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125EBA8293F9932009231F4 /* FreesbeApp.swift */; };
 		C125EBAB293F9932009231F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125EBAA293F9932009231F4 /* ContentView.swift */; };
 		C125EBAD293F9932009231F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C125EBAC293F9932009231F4 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		9E8B87B02947C8BB00976DB9 /* AddNewFreesbeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFreesbeView.swift; sourceTree = "<group>"; };
 		9E8B87B22947D21F00976DB9 /* SwipeToLaunchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToLaunchButton.swift; sourceTree = "<group>"; };
 		9E8B87B629480D0A00976DB9 /* CaughtCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaughtCardView.swift; sourceTree = "<group>"; };
+		9E98844D294BF6DE00E4A122 /* PJRPulseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PJRPulseButton.swift; sourceTree = "<group>"; };
+		9E988450294BFB0800E4A122 /* InformationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationsView.swift; sourceTree = "<group>"; };
 		C125EBA5293F9932009231F4 /* Freesbe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freesbe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C125EBA8293F9932009231F4 /* FreesbeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreesbeApp.swift; sourceTree = "<group>"; };
 		C125EBAA293F9932009231F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 		9E4D97422948D01B00F6B4E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9E98844F294BFAEC00E4A122 /* InformationsView */,
 				9E4D97462948D49C00F6B4E6 /* TopMenu */,
 				9E4D97452948D3A900F6B4E6 /* CarouselView */,
 				9E4D97442948D37900F6B4E6 /* NewFreesbe */,
@@ -117,6 +122,7 @@
 		9E4D97452948D3A900F6B4E6 /* CarouselView */ = {
 			isa = PBXGroup;
 			children = (
+				9E98844D294BF6DE00E4A122 /* PJRPulseButton.swift */,
 				9E7A95FC2947782800B558A2 /* SegmentedPickerView.swift */,
 				9E7A95E829474EE700B558A2 /* StackOfActivitiesCardView.swift */,
 				9E7A95EA29474F6500B558A2 /* ActivityCardView.swift */,
@@ -158,6 +164,14 @@
 				9E4D97512949E8CB00F6B4E6 /* Category.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9E98844F294BFAEC00E4A122 /* InformationsView */ = {
+			isa = PBXGroup;
+			children = (
+				9E988450294BFB0800E4A122 /* InformationsView.swift */,
+			);
+			path = InformationsView;
 			sourceTree = "<group>";
 		};
 		C125EB9C293F9931009231F4 = {
@@ -268,6 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E988451294BFB0800E4A122 /* InformationsView.swift in Sources */,
+				9E98844E294BF6DE00E4A122 /* PJRPulseButton.swift in Sources */,
 				9E7A960729478C7000B558A2 /* LaunchedCardView.swift in Sources */,
 				9E4D97492948D93300F6B4E6 /* CardModelView.swift in Sources */,
 				9E8B87B729480D0A00976DB9 /* CaughtCardView.swift in Sources */,

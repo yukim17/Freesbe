@@ -84,6 +84,9 @@ struct TopMenuView: View {
         Spacer()
         
     }
+    func toggleModal() {
+        showAddNewFreesbe = false
+    }
 }
 
 struct TopMenuView_Previews: PreviewProvider {

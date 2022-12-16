@@ -45,13 +45,13 @@ struct SegmentedPickerView: View {
             case .Caught:
                 HStack(alignment: .top) {
                     ScrollView(.vertical, showsIndicators: false) {
-                        CaughtCardView(arrayOfCaughtCards: EventInfo.arrayOfAcceptedEvents)
+                        CaughtCardView(arrayOfCaughtCards: FreesbeDB().arrayOfCaughtEvents)
                     }
                 }
             case .Launched:
                 HStack(alignment: .top) {
                     ScrollView(.vertical, showsIndicators: false) {
-                        LaunchedCardView(arrayOfLaunchedCards: EventInfo.arrayOfLaunchedEvents)
+                        LaunchedCardView(arrayOfLaunchedCards: FreesbeDB().arrayOfLaunchedEvents)
                     }
                 }
             }
