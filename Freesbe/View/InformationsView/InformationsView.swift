@@ -14,27 +14,34 @@ struct InformationsView: View {
     var body: some View {
         ZStack(alignment: .top){
             Rectangle()
+                .foregroundColor(.white)
+                .ignoresSafeArea()
+           /* Rectangle()
                 .foregroundColor(Color("paletteCard"))
             VStack {
                 Spacer()
                 Rectangle()
                     .foregroundColor(.white)
                     .frame(height: 700)
-            }
+            }*/
             VStack {
-                HStack  {
-                    Image(systemName: "person.fill")
-                        .font(.title)
-                    Text("22")
-                    Spacer()
-                    Button("Close", action: done)
-                        .foregroundColor(Color("paletteTitle"))
-                        .fontWeight(.bold)
-                    
+                ZStack {
+                    Rectangle()
+                        .frame(height: 60, alignment: .center)
+                        .foregroundColor(Color("paletteCard"))
+                    HStack  {
+                        Image(systemName: "person.fill")
+                            .font(.title)
+                        Text("22")
+                        Spacer()
+                        Button("Close", action: done)
+                            .fontWeight(.bold)
+                        
+                    }
+                    .foregroundColor(Color("paletteTitle"))
+                    .padding(.horizontal, 20)
+                    .padding(.top, 5)
                 }
-                .padding(.leading, 30)
-                .padding(.trailing, 30)
-                .padding(.top, 18)
                 
                 HStack(alignment: .top) {
                     VStack(alignment: .leading) {
@@ -104,6 +111,7 @@ struct InformationsView: View {
                 RoundedRectangle(cornerRadius: 2)
                     .frame(width: 342, height: 1, alignment: .center)
                     .padding(.top, 20)
+                Spacer()
             }
             
         }

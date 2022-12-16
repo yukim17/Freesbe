@@ -64,7 +64,7 @@ struct CardView: View {
        }
        .frame(width: 324 , height: 148, alignment: .center)
        .sheet(isPresented: $isDetailShow) {
-           Text("Here the details")
+           InformationsView(card: card)
                .presentationDetents([.bar])
        }
        

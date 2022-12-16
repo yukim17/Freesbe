@@ -82,7 +82,7 @@ class FreesbeDB: ObservableObject, Identifiable {
                 creator: UserInfo(
                     name: "Luha",
                     surname: "Aucella",
-                    username: "ialuha"
+                    username: "iamluha"
                 ))]
         
         @Published var arrayOfCaughtEvents: [EventInfo] = [

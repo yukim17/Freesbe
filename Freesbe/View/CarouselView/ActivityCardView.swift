@@ -19,7 +19,7 @@ struct ActivityCardView: View {
     @State private var isRotated = false
     @State private var isModalShown = false
     @State private var isShowingDetails = false
-    
+    @Environment(\.dismiss) var dismiss
     
     
     var body: some View {
@@ -44,8 +44,8 @@ struct ActivityCardView: View {
         .animation(.spring(), value: offset)
         .animation(.default, value: offset)
         .animation(.easeInOut(duration: 10), value: scaleAmount)
-        .sheet(isPresented: $isModalShown) { Text("You CAUGHT the project") }
-        .sheet(isPresented: $isShowingDetails) { Text("Here the details").presentationDetents([.bar]) }
+        .sheet(isPresented: $isModalShown) { ConfirmationView().presentationDetents([.bar]) }
+        .sheet(isPresented: $isShowingDetails) { InformationsView(card: card).presentationDetents([.bar]) }
         .onTapGesture {
             isShowingDetails.toggle()
         }

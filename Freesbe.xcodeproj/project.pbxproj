@@ -26,6 +26,7 @@
 		9E8B87B729480D0A00976DB9 /* CaughtCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B87B629480D0A00976DB9 /* CaughtCardView.swift */; };
 		9E98844E294BF6DE00E4A122 /* PJRPulseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E98844D294BF6DE00E4A122 /* PJRPulseButton.swift */; };
 		9E988451294BFB0800E4A122 /* InformationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E988450294BFB0800E4A122 /* InformationsView.swift */; };
+		9E988453294C09F700E4A122 /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E988452294C09F700E4A122 /* ConfirmationView.swift */; };
 		C125EBA9293F9932009231F4 /* FreesbeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125EBA8293F9932009231F4 /* FreesbeApp.swift */; };
 		C125EBAB293F9932009231F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125EBAA293F9932009231F4 /* ContentView.swift */; };
 		C125EBAD293F9932009231F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C125EBAC293F9932009231F4 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		9E8B87B629480D0A00976DB9 /* CaughtCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaughtCardView.swift; sourceTree = "<group>"; };
 		9E98844D294BF6DE00E4A122 /* PJRPulseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PJRPulseButton.swift; sourceTree = "<group>"; };
 		9E988450294BFB0800E4A122 /* InformationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationsView.swift; sourceTree = "<group>"; };
+		9E988452294C09F700E4A122 /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		C125EBA5293F9932009231F4 /* Freesbe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freesbe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C125EBA8293F9932009231F4 /* FreesbeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreesbeApp.swift; sourceTree = "<group>"; };
 		C125EBAA293F9932009231F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				9E988450294BFB0800E4A122 /* InformationsView.swift */,
+				9E988452294C09F700E4A122 /* ConfirmationView.swift */,
 			);
 			path = InformationsView;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				9E8B87B32947D21F00976DB9 /* SwipeToLaunchButton.swift in Sources */,
 				9E7A95E729474E4B00B558A2 /* Card.swift in Sources */,
 				9E7A95F6294767CE00B558A2 /* TopMenuView.swift in Sources */,
+				9E988453294C09F700E4A122 /* ConfirmationView.swift in Sources */,
 				9E8B87B12947C8BB00976DB9 /* AddNewFreesbeView.swift in Sources */,
 				9E7A95FD2947782800B558A2 /* SegmentedPickerView.swift in Sources */,
 				9E7A95EF2947631B00B558A2 /* WaveFilled.swift in Sources */,
