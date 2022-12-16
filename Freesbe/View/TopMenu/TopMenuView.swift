@@ -69,11 +69,7 @@ struct TopMenuView: View {
                             .frame(width: 70, height: 42)
                     }
                 }
-                
-                
-                
             }
-            
         }
         .foregroundColor(Color("paletteTitle"))
         .padding(.top, 10)
@@ -81,8 +77,6 @@ struct TopMenuView: View {
             AddNewFreesbeView()
                 .presentationDetents([.bar])
         }
-        Spacer()
-        
     }
     func toggleModal() {
         showAddNewFreesbe = false

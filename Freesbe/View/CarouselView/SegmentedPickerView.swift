@@ -24,39 +24,29 @@ struct SegmentedPickerView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 30) {
+            
             Picker("Main categories", selection: $selectedCategory) {
                 ForEach(MainCategory.allCases, id: \.self) { selection in
                     Text(selection.rawValue)
                 }
             }
-            .frame(width: 340)
-            .padding(.top, 30)
             .pickerStyle(.segmented)
+            .padding(.horizontal, 16)
             
             switch selectedCategory {
             case .Feed:
-                VStack {
-                    Spacer()
                     StackOfActivityCardsView()
-                    
-                        
-                }
+                
             case .Caught:
-                HStack(alignment: .top) {
-                    ScrollView(.vertical, showsIndicators: false) {
                         CaughtCardView(arrayOfCaughtCards: FreesbeDB().arrayOfCaughtEvents)
-                    }
-                }
+    
             case .Launched:
-                HStack(alignment: .top) {
-                    ScrollView(.vertical, showsIndicators: false) {
                         LaunchedCardView(arrayOfLaunchedCards: FreesbeDB().arrayOfLaunchedEvents)
-                    }
-                }
             }
         }
-        Spacer()
+       
+        
     }
 }
 

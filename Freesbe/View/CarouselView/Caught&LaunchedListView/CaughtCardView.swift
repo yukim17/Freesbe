@@ -13,17 +13,19 @@ struct CaughtCardView: View {
     
     
     var body: some View {
-        VStack {
-            ForEach(arrayOfCaughtCards) { index in
-                VStack(alignment: .leading){
-                    CardView(card: index)
-                        .frame(height: 220)
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack {
+                ForEach(arrayOfCaughtCards) { index in
+                    VStack(alignment: .leading){
+                        CardView(card: index)
+                            .frame(height: 220)
+                    }
+                    .sheet(isPresented: $infoModal) {
+                    }
                 }
-                .sheet(isPresented: $infoModal) {
-                }
+                Spacer(minLength: 200)
             }
         }
-        .padding(.top, 50)
     }
 }
 

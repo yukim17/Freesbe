@@ -12,20 +12,17 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Rectangle()
-                    .ignoresSafeArea()
-                    .foregroundColor(.white)
-                
                 WaveFilled()
                 
                 VStack {
                     TopMenuView(isActive: $isActive)
+                        .padding(.vertical, 24)
+                        
                     NavigationLink(destination: Text(""), isActive: $isActive) {
                     }
                     .labelsHidden()
                     
                     SegmentedPickerView()
-                        
                 }
                 
             }

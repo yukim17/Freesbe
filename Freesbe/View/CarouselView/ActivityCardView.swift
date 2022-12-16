@@ -34,7 +34,7 @@ struct ActivityCardView: View {
                         .mask(Circle().frame(width: 240, height: 240))
                 }
         }
-        .frame(width: 380, height: 380, alignment: .center)
+        .frame(width: 350, height: 350, alignment: .center)
         .rotation3DEffect(Angle(degrees: self.isRotated ? 360 * 20 : 0), axis: (x: 0, y: 0, z: 1), anchor: .center)
         .scaleEffect(scaleAmount)
         .offset(y: offset)

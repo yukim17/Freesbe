@@ -15,14 +15,13 @@ struct WaveFilled: View {
             ZStack(alignment: .top) {
                 WaveMath(yOffset: change ? -0.8 : -0.2)
                     .fill(Color("paletteTop").opacity(0.5))
-                    .frame(height: 200.0)
                     .animation(Animation.easeInOut(duration: 4).repeatForever(autoreverses: true))
                 
                 WaveMath(yOffset: change ? -0.5 : -0.1)
                     .fill(Color("paletteTop").opacity(1))
-                    .frame(height: 200.0)
                     .animation(Animation.easeInOut(duration: 3).repeatForever(autoreverses: true))
             }
+            .frame(height: 200.0)
             Spacer()
         }
         .edgesIgnoringSafeArea(.top)

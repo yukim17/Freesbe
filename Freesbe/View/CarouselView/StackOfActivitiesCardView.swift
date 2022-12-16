@@ -20,7 +20,6 @@ struct StackOfActivityCardsView: View {
     var body: some View {
         ZStack {
             VStack {
-                Spacer()
                 ZStack {
                     ForEach(0..<cards.count, id: \.self) { index in
                         VStack {
@@ -63,11 +62,10 @@ struct StackOfActivityCardsView: View {
                                 .font(.largeTitle)
                         }
                         .padding(.top, 20)
-                        .padding(.bottom, 100)
                     }
+                    .padding(.top,200)
                 }
-                
-                
+                Spacer(minLength: 30)
                 ZStack {
                     Circle()
                         .stroke(Color("paletteMain"),lineWidth: 2)
@@ -75,9 +73,9 @@ struct StackOfActivityCardsView: View {
 
                     PJRPulseButton(color: Color("paletteMain"), systemImageName: "hand.wave.fill", buttonWidth: 50, numberOfOuterCircles: 3)
                 }
-                .padding(.top, 50)
+                .ignoresSafeArea()
             }
-            .ignoresSafeArea()
+            
             .sheet(isPresented: $showingEditScreen, onDismiss:  resetCards) {
                 Text("lol")
             }
@@ -94,6 +92,6 @@ struct StackOfActivityCardsView: View {
 
 struct StackOfActivityCardsView_Previews: PreviewProvider {
     static var previews: some View {
-        StackOfActivityCardsView()
+        ContentView()
     }
 }
