@@ -8,6 +8,8 @@ An app designed exclusively for Academy Students, providing them with a platform
 
 ## Features
 
+![githubgifdemo](https://github.com/palant-dev/Freesbe/assets/113528707/e29744ba-ff81-4672-b602-d02a41acdd76)
+
 - Users can create and customize activity listings with details such as date, time, location, and required resources.
 - The app includes a notification system to keep users updated on activity responses, confirmations, and any changes made by participants.
 - Features a user-friendly interface with intuitive navigation, making it easy for students to browse and engage with activities of interest.
